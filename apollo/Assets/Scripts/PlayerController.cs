@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody player;
 
-    public float speed = 2500f;
-    public float speedLimit = 12f;
+    public float speed;
+    public float speedLimit;
+
+    public float rotationSpeed;
 
     private void Update() {
 
@@ -16,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKey("w"))
         {
-            finalMovement.y += 1;
+            finalMovement.z += 1;
         }
         if(Input.GetKey("a"))
         {
@@ -24,14 +26,23 @@ public class PlayerController : MonoBehaviour
         }
         if(Input.GetKey("s"))
         {
-            finalMovement.y -= 1;
+            finalMovement.z -= 1;
         }
         if(Input.GetKey("d"))
         {
             finalMovement.x += 1;
+            if(player.transform.rotation.eulerAngles.y <= 90)
+            {
+                player.transform.Rotate(Vector3.ClampMagnitude(new Vector3(0, rotationSpeed, 0), 90), Space.Self);
+            }
+        }
+        if(Input.GetKey("q"))
+        {
+            GetComponent<PlayerInteractions>().dropItem(player.transform);
         }
 
         player.AddForce(speed * finalMovement.normalized * Time.deltaTime);
         player.velocity = Vector3.ClampMagnitude(player.velocity, speedLimit);
+        
     }
 }
