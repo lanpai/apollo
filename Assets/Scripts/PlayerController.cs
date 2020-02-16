@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     public float rotationSpeed;
 
+    public Animator animator;
+
     private void FixedUpdate() {
 
         Vector3 finalMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
             //transform.rotation = to;
         }
 
-        player.velocity = Vector3.ClampMagnitude(player.velocity, speedLimit);
+        animator.SetFloat("Speed", player.velocity.magnitude / 5.0f);
+        
+        //player.velocity = Vector3.ClampMagnitude(player.velocity, speedLimit);
     }
 }
