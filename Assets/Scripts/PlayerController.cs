@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody player;
 
-    public float speed;
+    public float moveSpeed;
+    public float moveSpeedConstant;
     public float speedLimit;
 
     public float rotationSpeed;
@@ -17,61 +18,23 @@ public class PlayerController : MonoBehaviour
         Vector3 finalMovement = Vector3.zero;
         float currentRotation = player.transform.rotation.eulerAngles.y;
 
-        print(currentRotation);
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKey("w"))
-        {
-            finalMovement.z += 1;
-            if (currentRotation > 180)
-            {
-                ccwRotation();
-            }
-            else {
-                cwRotation();
-            }
-        }
+            finalMovement.z += moveVertical;
         if (Input.GetKey("a"))
-        {
-            finalMovement.x -= 1;
-            if (currentRotation < 270 && currentRotation > 90)
-            {
-                ccwRotation();
-            }
-            else {
-                cwRotation();
-            }
-            
-        }
+            finalMovement.x += moveHorizontal;      
         if (Input.GetKey("s"))
-        {
-            finalMovement.z -= 1;
-            if (currentRotation > 0 && currentRotation < 180)
-            {
-                ccwRotation();
-            }
-            else {
-                cwRotation();
-            }
-        }
+            finalMovement.z += moveVertical;
         if (Input.GetKey("d"))
-        {
-            finalMovement.x += 1;
-            if (currentRotation > 270 || currentRotation < 90)
-            {
-                ccwRotation();
-            }
-            else {
-                cwRotation();
-            }
-        }
+            finalMovement.x += moveHorizontal;
         if (Input.GetKeyDown("q"))
-        {
             GetComponent<PlayerInteractions>().dropItem(player.transform);
-        }
 
-        player.AddForce(speed * finalMovement.normalized * Time.deltaTime);
-        player.velocity = Vector3.ClampMagnitude(player.velocity, speedLimit);
-        
+        player.AddForce(Vector3.ClampMagnitude(moveSpeedConstant + moveSpeed * finalMovement.normalized * Time.deltaTime, speedLimit));
+
+        transform.rotation = Quaternion.LookRotation(-player.velocity);
     }
     private void cwRotation()
     {
