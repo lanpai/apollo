@@ -81,6 +81,14 @@ public class Recipes : MonoBehaviour
             new List<ItemType> { ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen },
             new List<ItemType> { ItemType.LiquidOx });
 
+        recipes.Add( //oxygen tank
+            new List<ItemType> { ItemType.Iron, ItemType.Iron, ItemType.Carbon, ItemType.Hydrogen },
+            new List<ItemType> { ItemType.OxygenTank });
+
+        recipes.Add( //fuel tank
+            new List<ItemType> { ItemType.Iron, ItemType.Aluminum, ItemType.Carbon, ItemType.Iron, ItemType.Aluminum, ItemType.Carbon, ItemType.Iron, ItemType.Aluminum, ItemType.Carbon, ItemType.Iron, ItemType.Aluminum, ItemType.Carbon },
+            new List<ItemType> { ItemType.FuelStorage });
+
     }
 
     public static List<List<ItemType>> CheckRecipes(List<ItemType> items)

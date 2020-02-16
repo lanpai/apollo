@@ -22,7 +22,7 @@ public class FuelStorage : MonoBehaviour, Item
 
     Element[] getElements()
     {
-        Element[] e = { new Titanium(6), new Aluminum(6) };
+        Element[] e = { new Iron(6), new Aluminum(6), new Carbon(6) };
         return e;
     }
 }
