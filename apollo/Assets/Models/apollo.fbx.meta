@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 45c4a402f00b46df3bbf10f4d52e6b2a
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 White
+    second: {fileID: 2100000, guid: 29376ef0da9439e4e8a6960f8fa010a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 Gray
+    second: {fileID: 2100000, guid: b928a314f11844c5ab85dc3f3a88e9fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 Red
+    second: {fileID: 2100000, guid: 6409487ee98ae1a5a8fdbc35a265f325, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04 Helmet
+    second: {fileID: 2100000, guid: 62fa12d43521fb96885df11c4fcebdc6, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: apollo(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: apollo(Clone)
+      position: {x: -0, y: 1.1663574, z: 0.000000101966194}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Head
+      parentName: apollo(Clone)
+      position: {x: -0.0000000037252903, y: 2.4736252, z: -0.21888216}
+      rotation: {x: -0.8519052, y: 0, z: -0, w: 0.52369595}
+      scale: {x: 85.83416, y: 83.0611, z: 81.91868}
+    - name: Backpack
+      parentName: apollo(Clone)
+      position: {x: -0.0000000018626451, y: 1.7734095, z: 0.7890103}
+      rotation: {x: -0.72911495, y: 0, z: -0, w: 0.68439126}
+      scale: {x: 100.47331, y: 44.400303, z: 150.1661}
+    - name: Apollo
+      parentName: apollo(Clone)
+      position: {x: -0, y: 1.1663574, z: 0.000000101966194}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Spine
+      parentName: Apollo
+      position: {x: -4.6566128e-12, y: -0.0007415532, z: 0.005445549}
+      rotation: {x: -0.45663768, y: 0.5398907, z: -0.45663768, w: 0.5398908}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: Spine.001
+      parentName: Spine
+      position: {x: -2.7939677e-11, y: 0.003764653, z: 3.330669e-18}
+      rotation: {x: -0.0599218, y: -0.704563, z: -0.05992176, w: 0.7045635}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: Spine.002
+      parentName: Spine.001
+      position: {x: -3.8857806e-18, y: 0.0046560457, z: 4.6566054e-12}
+      rotation: {x: -0.05780502, y: -0.00000011946487, z: -0.000000021865045, w: 0.9983279}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine.003
+      parentName: Spine.002
+      position: {x: -2.220446e-18, y: 0.0046559265, z: 3.72529e-11}
+      rotation: {x: 0.00000001993342, y: 0.99893385, z: -0.046164867, w: -0.00000019583621}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine.003_end
+      parentName: Spine.003
+      position: {x: -0, y: 0.005446286, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm.L
+      parentName: Spine.002
+      position: {x: -2.220446e-18, y: 0.0046559265, z: 3.72529e-11}
+      rotation: {x: 0.4885005, y: 0.566147, z: -0.5178662, w: 0.41552308}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999999}
+    - name: Arm.001.L
+      parentName: Arm.L
+      position: {x: 2.3283063e-11, y: 0.0076918732, z: 7.267049e-10}
+      rotation: {x: 0.06107477, y: 0.012497956, z: -0.023324868, w: 0.99778235}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: Arm.001.L_end
+      parentName: Arm.001.L
+      position: {x: -0, y: 0.0060255635, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm.R
+      parentName: Spine.002
+      position: {x: -5.5511148e-18, y: 0.0046559265, z: 3.72529e-11}
+      rotation: {x: 0.37208444, y: 0.4783808, z: -0.60751945, w: 0.51344436}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+    - name: Arm.001.R
+      parentName: Arm.R
+      position: {x: -3.259629e-11, y: 0.0076918732, z: 1.137014e-10}
+      rotation: {x: 0.061074764, y: -0.012497978, z: 0.023324857, w: 0.99778235}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Arm.001.R_end
+      parentName: Arm.001.R
+      position: {x: -0, y: 0.0060255635, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg.L
+      parentName: Apollo
+      position: {x: 0.0049196472, y: -0.003193285, z: 0.0076280483}
+      rotation: {x: 0.050563946, y: 0.75607985, z: 0.6497916, w: -0.059644375}
+      scale: {x: 1, y: 0.9999997, z: 0.99999994}
+    - name: Leg.L_end
+      parentName: Leg.L
+      position: {x: -0, y: 0.0027733867, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg.R
+      parentName: Apollo
+      position: {x: -0.0049196472, y: -0.003193285, z: 0.0076280483}
+      rotation: {x: -0.050563946, y: 0.75607985, z: 0.6497916, w: 0.059644375}
+      scale: {x: 1, y: 0.9999997, z: 0.99999994}
+    - name: Leg.R_end
+      parentName: Leg.R
+      position: {x: -0, y: 0.0027733867, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Panel
+      parentName: apollo(Clone)
+      position: {x: 0.0000000024447218, y: 1.2769921, z: -0.8683075}
+      rotation: {x: -0.66051656, y: 0, z: -0, w: 0.7508115}
+      scale: {x: 35.24241, y: 19.108198, z: 35.24241}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Spine
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
