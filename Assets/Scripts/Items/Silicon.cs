@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Silicon : Element
+public class Silicon : MonoBehaviour, Element
 {
     private int count;
 

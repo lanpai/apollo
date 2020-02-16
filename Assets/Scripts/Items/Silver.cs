@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Silver : Element
+public class Silver : MonoBehaviour, Element
 {
     private int count;
 
