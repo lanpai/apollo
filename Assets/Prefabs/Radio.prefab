@@ -96,6 +96,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radio
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 829dcd21946a7741d8d84bfad764d584,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 829dcd21946a7741d8d84bfad764d584, type: 3}
 --- !u!1 &6453335422909270693 stripped

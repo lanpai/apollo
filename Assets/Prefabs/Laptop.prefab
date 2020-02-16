@@ -96,6 +96,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f78399ddeba8a4f99a00f4be9a28b971,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f78399ddeba8a4f99a00f4be9a28b971, type: 3}
 --- !u!1 &3082535417614770423 stripped
