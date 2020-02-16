@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Antenna : Item
 {
-    // Start is called before the first frame update
-    void Start()
+    private int count;
+    public Antenna(int c)
     {
-        
+        count = c;
+    }
+    public string getDescription()
+    {
+        return "";
     }
 
-    // Update is called once per frame
-    void Update()
+    public int getCount()
     {
-        
+        return count;
     }
 }

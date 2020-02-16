@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface Item
 {
-    public string Description { get; }
-    public int Count { get; set; }
+    string getDescription();
+    int getCount();
 }

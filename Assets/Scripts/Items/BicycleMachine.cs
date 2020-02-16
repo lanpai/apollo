@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BicycleMachine : Item
 {
-    // Start is called before the first frame update
-    void Start()
+    private int count;
+    public BicycleMachine(int c)
     {
-        
+        count = c;
+    }
+    public string getDescription()
+    {
+        return "";
     }
 
-    // Update is called once per frame
-    void Update()
+    public int getCount()
     {
-        
+        return count;
     }
 }
