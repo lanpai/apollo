@@ -11,7 +11,7 @@ public class PlayerInteractions : MonoBehaviour
         float playerRadius = player.GetComponent<CapsuleCollider>().radius;
         float playerHeight = player.GetComponent<CapsuleCollider>().height;
 
-        Vector3 itemDropOffset = (player.transform.position - player.transform.forward * playerRadius * 1.5f) + (0.5f * new Vector3(0, playerHeight, 0));
+        Vector3 itemDropOffset = (player.transform.position - player.transform.forward * playerRadius * 2f) + (0.5f * new Vector3(0, playerHeight, 0));
 
         GameObject item = Instantiate(itemPrefab, itemDropOffset, transform.rotation) as GameObject;
     }
