@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("q"))
             GetComponent<PlayerInteractions>().dropItem(player.transform);
 
-        player.AddForce(Vector3.ClampMagnitude(moveSpeedConstant + moveSpeed * finalMovement.normalized * Time.deltaTime, speedLimit));
+        player.AddForce(Vector3.ClampMagnitude(moveSpeedConstant * finalMovement.normalized + moveSpeed * finalMovement.normalized * Time.deltaTime, speedLimit));
 
         transform.rotation = Quaternion.LookRotation(-player.velocity);
     }
