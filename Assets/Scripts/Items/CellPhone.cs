@@ -7,6 +7,7 @@ public class CellPhone : MonoBehaviour, Item
     public Color color = new Color(0.24f, 0.24f, 0.24f);
 
     private int count;
+        
     public CellPhone(int c) => count = c;
 
     public string getDescription() => "Maybe you'd find a way off this tin can if you put down yo dayum phone!";
@@ -18,4 +19,4 @@ public class CellPhone : MonoBehaviour, Item
         Element[] elm = { new Copper(1), new Lithium(1), new Tin(1), new Gold(1), new Silver(1), new Nickel(1), new Aluminum(1) };
         return elm;
     }
-}
+}   

@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flag : Item
+public class Flag : MonoBehaviour, Item
 {
-    private int count;
-    public Flag(int c)
-    {
-        count = c;
-    }
-    public string getDescription()
-    {
-        return "";
-    }
+    public Color color = new Color(0.24f, 0.24f, 0.24f);
 
-    public int getCount()
+    private int count;
+
+    public Flag(int c) => count = c;
+
+    public string getDescription() => "Ya stick it to something and pretend to be proud of it.";
+
+    public int getCount() => count;
+
+    Element[] getElements()
     {
-        return count;
+        Element[] e = { new Carbon(12), new Hydrogen(22), new Nitrogen(2), new Oxygen(2) };
+        return e;
     }
 }
