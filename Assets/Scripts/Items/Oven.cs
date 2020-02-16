@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oven : Item
+public class Oven : MonoBehaviour, Item
 {
     public Color color = new Color(0.29f, 0.29f, 0.29f );
     private int count;
