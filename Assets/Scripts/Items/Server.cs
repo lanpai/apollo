@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Server : Item
+public class Server : MonoBehaviour, Item
 {
     private int count;
     public Server(int c)
@@ -11,11 +11,17 @@ public class Server : Item
     }
     public string getDescription()
     {
-        return "";
+        return "It lets you communicate with SpaceEX. Destroying it would be big bad.";
     }
 
     public int getCount()
     {
         return count;
+    }
+
+    public Element[] getElements()
+    {
+        Element[] elm = {new Carbon(1), new Hydrogen(1)};
+        return elm;
     }
 }

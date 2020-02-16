@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Self : Item
+public class Self : MonoBehaviour, Item
 {
     private int count;
     public Self(int c)
@@ -11,11 +11,17 @@ public class Self : Item
     }
     public string getDescription()
     {
-        return "";
+        return "You, you, you, you, you.";
     }
 
     public int getCount()
     {
         return count;
+    }
+
+    public Element[] getElements()
+    {
+        Element[] elm = {new Carbon(1), new Hydrogen(1)};
+        return elm;
     }
 }

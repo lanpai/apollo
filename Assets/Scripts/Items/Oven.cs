@@ -9,7 +9,7 @@ public class Oven : Item
 
     public Oven(int c) => count = c;
 
-    public string getDescription() => "It- It's an oven. You gotta know what an oven is, right?";
+    public string getDescription() => "It- It's an oven. It cooks stuff..";
 
     public int getCount() => count;
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Titanium : Element
+public class Titanium : MonoBehaviour, Element
 {
     private int count;
 

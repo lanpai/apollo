@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oxygen : Element
+public class Oxygen : MonoBehaviour, Element
 {
     private int count;
 

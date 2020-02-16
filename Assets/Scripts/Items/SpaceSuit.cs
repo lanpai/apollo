@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceSuit : Item
+public class SpaceSuit : MonoBehaviour, Item
 {
     private int count;
     public SpaceSuit(int c)
@@ -11,11 +11,17 @@ public class SpaceSuit : Item
     }
     public string getDescription()
     {
-        return "";
+        return "Ain't nobody want to see what's under.";
     }
 
     public int getCount()
     {
         return count;
+    }
+
+    public Element[] getElements()
+    {
+        Element[] elm = {new Carbon(1), new Hydrogen(1)};
+        return elm;
     }
 }
