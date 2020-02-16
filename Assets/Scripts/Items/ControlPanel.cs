@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlPanel : Item
+public class ControlPanel : MonoBehaviour, Item
 {
-    private int count;
-    public ControlPanel(int c)
-    {
-        count = c;
-    }
-    public string getDescription()
-    {
-        return "";
-    }
+    public Color color = new Color(0.14f, 0.84f, 0.18f);
 
-    public int getCount()
+    private int count;
+    public ControlPanel(int c) => count = c;
+
+    public string getDescription() => "The Control Panel contains all the flashy buttons that go \"beep boop\".";
+
+    public int getCount() => count;
+
+    public Element[] getElements()
     {
-        return count;
+        Element[] elm = { new Iron(5), new Aluminum(5), new Silicon(5), new Gold(2) };
+        return elm;
     }
 }

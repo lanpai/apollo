@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Nitrogen : Element
+public class Nitrogen : MonoBehaviour, Element
 {
     private int count;
 

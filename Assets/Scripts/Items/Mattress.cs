@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mattress : Item
+public class Mattress : MonoBehaviour, Item
 {
     private int count;
     public Mattress(int c)
@@ -11,11 +11,17 @@ public class Mattress : Item
     }
     public string getDescription()
     {
-        return "";
+        return "Some people eat this stuff. My Strange Addictions...";
     }
 
     public int getCount()
     {
         return count;
+    }
+
+    public Element[] getElements()
+    {
+        Element[] elm = {new Carbon(8), new Hydrogen(8)};
+        return elm;
     }
 }

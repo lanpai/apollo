@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hydrogen : Element
+public class Hydrogen : MonoBehaviour, Element
 {
     private int count;
 

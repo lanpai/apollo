@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laptop : Item
+public class Laptop : MonoBehaviour, Item
 {
     private int count;
     public Laptop(int c)
@@ -11,11 +11,17 @@ public class Laptop : Item
     }
     public string getDescription()
     {
-        return "";
+        return "Torture device for the hackathon. Key to success. Key to no sleep.";
     }
 
     public int getCount()
     {
         return count;
+    }
+
+    public Element[] getElements()
+    {
+        Element[] elm = {new Carbon(1), new Germanium(1)};
+        return elm;
     }
 }

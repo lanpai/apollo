@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Germanium : Element
+public class Germanium : MonoBehaviour, Element
 {
     private int count;
 

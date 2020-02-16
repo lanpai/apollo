@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Iron : Element
+public class Iron : MonoBehaviour, Element
 {
     private int count;
     public Iron(int c)
@@ -11,8 +11,7 @@ public class Iron : Element
     }
     public string getDescription()
     {
-        //TODO
-        return "This is Iron. Not finished!";
+        return "Iron, super important during the Industrial Revolution. Factories. WOOH!";
     }
 
     public int getCount()
