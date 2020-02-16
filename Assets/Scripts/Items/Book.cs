@@ -15,7 +15,7 @@ public class Book : MonoBehaviour, Item
 
     public Element[] getElements()
     {
-        Elements[] elm = { new Carbon(6), new Hydrogen(10), new Oxygen(5) };
+        Element[] elm = { new Carbon(6), new Hydrogen(10), new Oxygen(5) };
         return elm;
     }
 }
