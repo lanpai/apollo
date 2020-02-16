@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BicycleMachine : Item
+public class BicycleMachine : MonoBehaviour, Item
 {
-    private int count;
-    public BicycleMachine(int c)
-    {
-        count = c;
-    }
-    public string getDescription()
-    {
-        return "";
-    }
+    public Color color = new Color(0.29f, 0.35f, 0.29f);
 
-    public int getCount()
+    private int count;
+    public BicycleMachine(int c) => count = c;
+
+    public string getDescription() => "Used to keep people in shape. You should try it...";
+
+    public int getCount() => count;
+
+    public Element[] getElements()
     {
-        return count;
+        Element[] elm = { new Iron(2), new Carbon(2), new Aluminum(1), new Titanium(1) };
+        return elm;
     }
 }

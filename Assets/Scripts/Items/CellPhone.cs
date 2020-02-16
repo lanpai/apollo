@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CellPhone : Item
+public class CellPhone : MonoBehaviour, Item
 {
-    private int count;
-    public CellPhone(int c)
-    {
-        count = c;
-    }
-    public string getDescription()
-    {
-        return "";
-    }
+    public Color color = new Color(0.24f, 0.24f, 0.24f);
 
-    public int getCount()
+    private int count;
+    public CellPhone(int c) => count = c;
+
+    public string getDescription() => "Maybe you'd find a way off this tin can if you put down yo dayum phone!";
+
+    public int getCount() => count;
+
+    public Element[] getElements()
     {
-        return count;
+        Element[] elm = { new Copper(1), new Lithium(1), new Tin(1), new Gold(1), new Silver(1), new Nickel(1), new Aluminum(1) };
+        return elm;
     }
 }

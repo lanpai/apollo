@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Antenna : Item
+public class Antenna : MonoBehaviour, Item
 {
-    private int count;
-    public Antenna(int c)
-    {
-        count = c;
-    }
-    public string getDescription()
-    {
-        return "Antennae are used tozzzzz- $$$%%% -nd recieeeee$$$ zz~~~ Hmmm. Reception seems to be terrible.";
-    }
+    public Color color = new Color(0.35f, 0.29f, 0.29f);
 
-    public int getCount()
-    {
-        return count;
-    }
+    private int count;
+    public Antenna(int c) => count = c;
+
+    public string getDescription() => "Antennae are used tozzzzz- $$$%%% -nd recieeeee$$$ zz~~~ Hmmm. Reception seems to be terrible.";
+
+    public int getCount() => count;
 
     public Element[] getElements()
     {

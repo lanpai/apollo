@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class Oven : Item
 {
+    public Color color = new Color(0.29f, 0.29f, 0.29f );
     private int count;
-    public Oven(int c)
-    {
-        count = c;
-    }
-    public string getDescription()
-    {
-        return "";
-    }
 
-    public int getCount()
-    {
-        return count;
-    }
+    public Oven(int c) => count = c;
+
+    public string getDescription() => "It- It's an oven. You gotta know what an oven is, right?";
+
+    public int getCount() => count;
 
     public Element[] getElements()
     {
