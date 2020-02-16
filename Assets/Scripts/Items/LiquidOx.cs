@@ -24,4 +24,9 @@ public class LiquidOx : MonoBehaviour, Item
         Element[] elm = {new Oxygen(6) };
         return elm;
     }
+
+    public string toString()
+    {
+        return "Liquid Oxygen";
+    }
 }

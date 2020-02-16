@@ -24,4 +24,9 @@ public class Kerosene : MonoBehaviour, Item
         Element[] elm = { new Carbon(10), new Hydrogen(22)};
         return elm;
     }
+
+    public string toString()
+    {
+        return "Kerosene";
+    }
 }

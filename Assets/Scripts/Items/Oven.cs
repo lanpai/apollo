@@ -24,4 +24,9 @@ public class Oven : MonoBehaviour, Item
         Element[] elm = { new Iron(2), new Carbon(1) };
         return elm; 
     }
+
+    public string toString()
+    {
+        return "Oven";
+    }
 }

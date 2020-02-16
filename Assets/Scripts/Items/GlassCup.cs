@@ -31,4 +31,9 @@ public class GlassCup : MonoBehaviour, Item
         Element[] elm = {new Silicon(1), new Aluminum(2), new Oxygen(5)};
         return elm;
     }
+
+    public string toString()
+    {
+        return "Glass Cup";
+    }
 }

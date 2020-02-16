@@ -30,4 +30,6 @@ public class Utensil : MonoBehaviour, Item
         Element[] elm = {new Carbon(8), new Hydrogen(8)};
         return elm;
     }
+
+    public string toString() => "Utensil";
 }

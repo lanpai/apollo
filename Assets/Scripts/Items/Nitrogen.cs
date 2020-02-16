@@ -32,4 +32,9 @@ public class Nitrogen : MonoBehaviour, Element
     {
         return count;
     }
+
+    public string toString()
+    {
+        return "Nitrogen";
+    }
 }

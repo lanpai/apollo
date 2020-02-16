@@ -31,4 +31,6 @@ public class WaterBottle : MonoBehaviour, Item
         Element[] elm = {new Carbon(1), new Iron(1), new Hydrogen(2), new Oxygen(1)};
         return elm;
     }
+
+    public string toString() => "WaterBottle";
 }

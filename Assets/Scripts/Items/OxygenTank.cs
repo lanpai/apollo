@@ -22,7 +22,12 @@ public class OxygenTank : MonoBehaviour, Item
 
     public Element[] getElements()
     {
-        Element[] elm = {new Iron(2), new Carbon(1), new Hydrogen(1)};
+        Element[] elm = { new Iron(2), new Carbon(1), new Hydrogen(1) };
         return elm;
+    }
+
+    public string toString()
+    {
+        return "Oxygen Tank";
     }
 }

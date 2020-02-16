@@ -27,4 +27,9 @@ public class Iron : MonoBehaviour, Element
     }
 
     public string getSymbol() => "Fe";
+
+    public string toString()
+    {
+        return "Iron";
+    }
 }

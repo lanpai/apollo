@@ -31,4 +31,9 @@ public class Laptop : MonoBehaviour, Item
         Element[] elm = {new Carbon(1), new Germanium(1)};
         return elm;
     }
+
+    public string toString()
+    {
+        return "Laptop";
+    }
 }

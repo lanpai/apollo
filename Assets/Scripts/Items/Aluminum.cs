@@ -21,4 +21,6 @@ public class Aluminum : MonoBehaviour, Element
     public string getSymbol() => "Al";
 
     public int getCount() => count;
+
+    public string toString() => "Aluminum";
 }

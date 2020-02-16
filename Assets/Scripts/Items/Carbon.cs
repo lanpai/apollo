@@ -21,4 +21,6 @@ public class Carbon : MonoBehaviour, Element
     public int getCount() => count;
 
     public string getSymbol() => "C";
+
+    public string toString() => "Carbon";
 }

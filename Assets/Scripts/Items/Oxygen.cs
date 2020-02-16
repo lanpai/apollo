@@ -33,4 +33,9 @@ public class Oxygen : MonoBehaviour, Element
     {
         return count;
     }
+
+    public string toString()
+    {
+        return "Oxygen";
+    }
 }

@@ -30,4 +30,9 @@ public class Pillow : MonoBehaviour, Item
         Element[] elm = {new Carbon(22), new Hydrogen(36), new Oxygen(2)};
         return elm;
     }
+
+    public string toString()
+    {
+        return "Pillow";
+    }
 }

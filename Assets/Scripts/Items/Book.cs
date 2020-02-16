@@ -24,4 +24,6 @@ public class Book : MonoBehaviour, Item
         Element[] elm = { new Carbon(6), new Hydrogen(10), new Oxygen(5) };
         return elm;
     }
+
+    public string toString() => "Book";
 }

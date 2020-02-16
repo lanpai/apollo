@@ -32,4 +32,9 @@ public class Gold : MonoBehaviour, Element
     {
         return count;
     }
+
+    public string toString()
+    {
+        return "Gold";
+    }
 }
