@@ -14,6 +14,12 @@ public class Seats : MonoBehaviour, Item
         return "Literally been in this chair for 13 hours...";
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Seats;
+    }
+
     public int getCount()
     {
         return count;

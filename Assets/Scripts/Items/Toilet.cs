@@ -9,6 +9,13 @@ public class Toilet : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Toilet;
+    }
+
     public string getDescription()
     {
         return "What happened to the fly on the toilet seat? It got pissed off.";

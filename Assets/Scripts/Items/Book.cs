@@ -9,6 +9,12 @@ public class Book : MonoBehaviour, Item
 
     public Book(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Book;
+    }
+
     public string getDescription() => "What do you call 2000 mockingbirds? Two kilo mockingbird.";
 
     public int getCount() => count;

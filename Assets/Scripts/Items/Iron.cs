@@ -10,6 +10,12 @@ public class Iron : MonoBehaviour, Element
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Iron;
+    }
     public string getDescription()
     {
         return "Iron, super important during the Industrial Revolution. Factories. WOOH!";

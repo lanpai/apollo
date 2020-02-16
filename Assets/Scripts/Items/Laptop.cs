@@ -9,6 +9,13 @@ public class Laptop : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Laptop;
+    }
+
     public string getDescription()
     {
         return "Torture device for the hackathon. Key to success. Key to no sleep.";

@@ -9,6 +9,12 @@ public class BicycleMachine : MonoBehaviour, Item
     private int count;
     public BicycleMachine(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.BicycleMachine;
+    }
+
     public string getDescription() => "Used to keep people in shape. You should try it...";
 
     public int getCount() => count;

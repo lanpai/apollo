@@ -12,6 +12,12 @@ public class Nickel : MonoBehaviour, Element
         count = c;
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Nickel;
+    }
+
     public string getDescription()
     {
         return "Nickel, even worse than pennies.\nAtomic Number: 28  Atomic Mass: 58.693";

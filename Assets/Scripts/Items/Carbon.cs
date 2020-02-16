@@ -8,6 +8,12 @@ public class Carbon : MonoBehaviour, Element
 
     private int count;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Carbon;
+    }
+
     public Carbon(int c) => count = c;
 
     public string getDescription() => "Carbon is the biological building block of all life.\nAtomic Number: 6  Atomic Mass: 12.011";

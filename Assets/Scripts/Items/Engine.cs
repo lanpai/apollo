@@ -9,6 +9,12 @@ public class Engine : MonoBehaviour, Item
     private int count;
     public Engine(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Engine;
+    }
+
     public string getDescription() => "Powers your craft. You probably don't want to mess with it. No - seriously.";
 
     public int getCount() => count;

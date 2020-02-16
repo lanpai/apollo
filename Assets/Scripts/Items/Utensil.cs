@@ -9,6 +9,12 @@ public class Utensil : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Utensil;
+    }
     public string getDescription()
     {
         return "Eating with utensils are for the weak.";

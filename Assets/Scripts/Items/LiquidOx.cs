@@ -9,6 +9,12 @@ public class LiquidOx : MonoBehaviour, Item
 
     public LiquidOx(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.LiquidOx;
+    }
+
     public string getDescription() => "Second Necessity for space flight.";
 
     public int getCount() => count;

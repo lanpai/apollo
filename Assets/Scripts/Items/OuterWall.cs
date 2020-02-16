@@ -11,6 +11,13 @@ public class OuterWall : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.OuterWall;
+    }
+
     public string getDescription()
     {
         return "Yeah, if you remove this, I don't know what to say...";

@@ -15,7 +15,7 @@ public class Nitrogen : MonoBehaviour, Element
     private ItemType type;
     public ItemType getType()
     {
-        return ItemType::Nitrogen;
+        return ItemType.Nitrogen;
     }
 
     public string getDescription()

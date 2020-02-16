@@ -14,6 +14,12 @@ public class Pillow : MonoBehaviour, Item
         return "The cushiony heaven after a long day.";
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Pillow;
+    }
+
     public int getCount()
     {
         return count;

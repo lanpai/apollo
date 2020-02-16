@@ -7,6 +7,12 @@ public class Tin : MonoBehaviour, Element
     Color color = new Color(0.39f, 0.63f, 0.80f);
     private int count;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Tin;
+    }
+
     public Tin(int c)
     {
         count = c;

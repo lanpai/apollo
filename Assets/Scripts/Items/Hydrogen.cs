@@ -12,6 +12,12 @@ public class Hydrogen : MonoBehaviour, Element
         count = c;
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Hydrogen;
+    }
+
     public string getDescription()
     {
         return "Hydrogen powers the sun.\nAtomic Number: 1  Atomic Mass: 1.008";

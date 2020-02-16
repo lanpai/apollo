@@ -10,6 +10,13 @@ public class Mattress : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Mattress;
+    }
+
     public string getDescription()
     {
         return "Some people eat this stuff. My Strange Addictions...";

@@ -14,6 +14,12 @@ public class Radio : MonoBehaviour, Item
         return "Who uses these things now? Lol.";
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Radio;
+    }
+
     public int getCount()
     {
         return count;

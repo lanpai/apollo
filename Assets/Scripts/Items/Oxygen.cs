@@ -16,7 +16,7 @@ public class Oxygen : MonoBehaviour, Element
 
     public ItemType getType()
     {
-        return ItemType::Oxygen;
+        return ItemType.Oxygen;
     }
 
     public string getDescription()

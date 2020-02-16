@@ -9,6 +9,13 @@ public class SelfDetonatingButton : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.SelfDetonatingButton;
+    }
+
     public string getDescription()
     {
         return "Don't know why it's on the spaceship. Just avoid it.";

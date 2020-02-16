@@ -9,6 +9,12 @@ public class Server : MonoBehaviour, Item
     {
         count = c;
     }
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Server;
+    }
+
     public string getDescription()
     {
         return "It lets you communicate with SpaceEX. Destroying it would be big bad.";

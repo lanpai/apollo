@@ -8,6 +8,12 @@ public class Aluminum : MonoBehaviour, Element
 
     private int count;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Aluminum;
+    }
+
     public Aluminum(int c) => count = c;
 
     public string getDescription() => "Aluminum is a main component of aircraft and spacecraft due to its durability, low weight, and heat-resistance.\nAtomic Number: 13  Atomic Mass: 26.982";

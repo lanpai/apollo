@@ -7,6 +7,12 @@ public class Titanium : MonoBehaviour, Element
     Color color = new Color(0.14f, 0.25f, 0.32f);
     private int count;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Titanium;
+    }
+
     public Titanium(int c)
     {
         count = c;

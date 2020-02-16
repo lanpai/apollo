@@ -10,6 +10,13 @@ public class OxygenTank : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.OxygenTank;
+    }
+
     public string getDescription()
     {
         return "Stores all the oxygen so that the astronauts can breathe. We can't breathe nothing else.";

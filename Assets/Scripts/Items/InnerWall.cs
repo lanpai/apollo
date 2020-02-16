@@ -9,6 +9,13 @@ public class InnerWall : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.InnerWall;
+    }
+
     public string getDescription()
     {
         return "Separates the rooms, but is otherwise useless.";

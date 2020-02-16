@@ -9,6 +9,12 @@ public class Antenna : MonoBehaviour, Item
     private int count;
     public Antenna(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Antenna;
+    }
+
     public string getDescription() => "Antennae are used tozzzzz- $$$%%% -nd recieeeee$$$ zz~~~ Hmmm. Reception seems to be terrible.";
 
     public int getCount() => count;

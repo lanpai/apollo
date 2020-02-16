@@ -9,6 +9,12 @@ public class Clothing : MonoBehaviour, Item
     private int count;
     public Clothing(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Clothing;
+    }
+
     public string getDescription() => "Dude. You're wearing clothes. How do you not know what clothing is. At least I hope you are.";
 
     public int getCount() => count;

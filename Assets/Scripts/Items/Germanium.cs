@@ -12,6 +12,12 @@ public class Germanium : MonoBehaviour, Element
         count = c;
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Germanium;
+    }
+
     public string getDescription()
     {
         return "Germanium makes up transistors which are the most important invention in the age of information.\nAtomic Number: 32  Atomic Mass: 72.630";

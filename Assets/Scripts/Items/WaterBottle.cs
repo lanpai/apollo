@@ -9,6 +9,13 @@ public class WaterBottle : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.WaterBottle;
+    }
+
     public string getDescription()
     {
         return "Holds water.";

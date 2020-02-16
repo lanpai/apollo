@@ -9,6 +9,12 @@ public class ControlPanel : MonoBehaviour, Item
     private int count;
     public ControlPanel(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.ControlPanel;
+    }
+
     public string getDescription() => "The Control Panel contains all the flashy buttons that go \"beep boop\".";
 
     public int getCount() => count;

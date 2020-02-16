@@ -7,7 +7,13 @@ public class CellPhone : MonoBehaviour, Item
     public Color color = new Color(0.24f, 0.24f, 0.24f);
 
     private int count;
-        
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.CellPhone;
+    }
+
     public CellPhone(int c) => count = c;
 
     public string getDescription() => "Maybe you'd find a way off this tin can if you put down yo dayum phone!";

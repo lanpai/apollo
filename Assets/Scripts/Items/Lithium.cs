@@ -12,6 +12,12 @@ public class Lithium : MonoBehaviour, Element
         count = c;
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Lithium;
+    }
+
     public string getDescription()
     {
         return "Lithium makes up our batteries. WOW!\nAtomic Number: 3  Atomic Mass: 6.94";

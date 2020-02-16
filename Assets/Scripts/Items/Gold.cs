@@ -12,6 +12,12 @@ public class Gold : MonoBehaviour, Element
         count = c;
     }
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Gold;
+    }
+
     public string getDescription()
     {
         return "Fun Fact: If you bite gold, you might break your teeth!\nAtomic Number: 79  Atomic Mass: 196.97";

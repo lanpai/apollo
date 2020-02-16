@@ -9,6 +9,12 @@ public class Window : MonoBehaviour, Item
     {
         count = c;
     }
+
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Window;
+    }
     public string getDescription()
     {
         return "Watch you gaze at the abyss of nothingness before you and realize your irrelevancy to the rest of the universe. Oh hey, a star.";

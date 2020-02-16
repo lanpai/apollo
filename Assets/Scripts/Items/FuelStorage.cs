@@ -10,6 +10,12 @@ public class FuelStorage : MonoBehaviour, Item
 
     public FuelStorage(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.FuelStorage;
+    }
+
     public string getDescription() => "Stores fuel from the spacecraft.";
 
     public int getCount() => count;

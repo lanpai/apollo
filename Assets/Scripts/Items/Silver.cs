@@ -7,6 +7,12 @@ public class Silver : MonoBehaviour, Element
     Color color = new Color(0.8f, 0.92f, 1f);
     private int count;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Silver;
+    }
+
     public Silver(int c)
     {
         count = c;

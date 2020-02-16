@@ -10,6 +10,12 @@ public class Flag : MonoBehaviour, Item
 
     public Flag(int c) => count = c;
 
+    private ItemType type;
+    public ItemType getType()
+    {
+        return ItemType.Flag;
+    }
+
     public string getDescription() => "Ya stick it to something and pretend to be proud of it.";
 
     public int getCount() => count;
