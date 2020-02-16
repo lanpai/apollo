@@ -4,5 +4,4 @@ using UnityEngine;
 
 public interface Element : Item
 {
-    string getSymbol();
 }

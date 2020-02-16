@@ -23,11 +23,6 @@ public class Nitrogen : MonoBehaviour, Element
         return "Nitrogen makes up 78% of our atmosphere.\nAtomic Number: 7  Atomic Mass: 14.007";
     }
 
-    public string getSymbol()
-    {
-        return "N";
-    }
-
     public int getCount()
     {
         return count;

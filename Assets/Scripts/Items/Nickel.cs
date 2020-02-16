@@ -23,7 +23,7 @@ public class Nickel : MonoBehaviour, Element
         return "Nickel, even worse than pennies.\nAtomic Number: 28  Atomic Mass: 58.693";
     }
 
-    public string getSymbol()
+    public string toString()
     {
         return "Ni";
     }

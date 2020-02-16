@@ -85,6 +85,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aluminum
       objectReference: {fileID: 0}
+    - target: {fileID: 3979160663112955307, guid: c7ee60370df3e580aa04fcdf514cc271,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2150194348120085690, guid: c7ee60370df3e580aa04fcdf514cc271, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7ee60370df3e580aa04fcdf514cc271, type: 3}

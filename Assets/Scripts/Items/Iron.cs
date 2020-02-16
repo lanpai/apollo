@@ -26,10 +26,5 @@ public class Iron : MonoBehaviour, Element
         return count;
     }
 
-    public string getSymbol() => "Fe";
-
-    public string toString()
-    {
-        return "Iron";
-    }
+    public string toString() => "Fe";
 }

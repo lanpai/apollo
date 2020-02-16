@@ -80,6 +80,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carbon
       objectReference: {fileID: 0}
+    - target: {fileID: 3334818820025279249, guid: 133bd60b7dc057c4faeec422faf047a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3925870042414503885, guid: 133bd60b7dc057c4faeec422faf047a3,
         type: 3}
       propertyPath: m_Materials.Array.data[2]

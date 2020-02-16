@@ -18,9 +18,16 @@ public class PlayerController : MonoBehaviour
     public Rigidbody leftHand;
     public Rigidbody rightHand;
 
+    public TextMesh text;
+    public TextMesh element;
+
     public ParticleSystem particle;
 
     public Transform closestItemPos;
+
+    public Camera camera;
+
+    public AudioSource audio;
 
     private void Start() {
         carriedItem = null;
@@ -33,6 +40,8 @@ public class PlayerController : MonoBehaviour
             //carriedItem.GetComponent<Renderer>().material.shader = Shader.Find("Diffuse");
             particle.Stop();
             carriedItem = null;
+            text.text = "";
+            element.text = "";
         }
 
         Vector3 finalMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
@@ -43,6 +52,7 @@ public class PlayerController : MonoBehaviour
                 (player.transform.up * 1.0f);
             
             if (carriedItem == null) {
+                audio.Play();
                 float minDistance = 0.0f;
                 GameObject closest = null;
 
@@ -63,6 +73,8 @@ public class PlayerController : MonoBehaviour
             rightHand.AddForce(player.transform.forward * -20000.0f * Time.deltaTime);
 
             carriedItem.transform.position = Vector3.Lerp(carriedItem.transform.position, position, 10.0f * Time.deltaTime);
+            text.text = (carriedItem.GetComponent(typeof(Item)) as Item).getDescription();
+            element.text = (carriedItem.GetComponent(typeof(Item)) as Item).toString();
             
             closestItemPos = carriedItem.transform;
 
@@ -77,6 +89,9 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetFloat("Speed", player.velocity.magnitude / 5.0f);
+
+        text.transform.rotation = Quaternion.LookRotation(-(camera.transform.position - text.transform.position).normalized, Vector3.up);
+        element.transform.rotation = Quaternion.LookRotation(-(camera.transform.position - element.transform.position).normalized, Vector3.up);
     }
     public Transform getClosestTransform()
     {

@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
 
         RaycastHit hit;
         Vector3 direction = (camera.transform.position - playerTransform.position).normalized;
-        if (Physics.Raycast(playerTransform.position, direction, out hit, (camera.transform.position - playerTransform.position).magnitude, ~(LayerMask.GetMask("Ragdoll")))) {
+        if (Physics.Raycast(playerTransform.position, direction, out hit, (camera.transform.position - playerTransform.position).magnitude, LayerMask.GetMask("Wall"))) {
             transform.position = hit.point - direction * 0.1f;
         }
     }

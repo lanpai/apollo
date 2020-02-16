@@ -22,7 +22,7 @@ public class Titanium : MonoBehaviour, Element
         return "Similar to aluminum, titanium is often used in spacecraft and aircraft due to its light weight, durability, and heat-resistance.\n Atomic Number: 22  Atomic Mass: 47.867";
     }
 
-    public string getSymbol()
+    public string toString()
     {
         return "Ti";
     }

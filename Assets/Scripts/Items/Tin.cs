@@ -23,7 +23,7 @@ public class Tin : MonoBehaviour, Element
         return "Tin was essential during the Bronze Age, making up the bronze with a mixture of itself and copper.\nAtomic Number: 50  Atomic Mass: 118.71";
     }
 
-    public string getSymbol()
+    public string toString()
     {
         return "Sn";
     }

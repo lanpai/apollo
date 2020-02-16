@@ -23,11 +23,6 @@ public class Hydrogen : MonoBehaviour, Element
         return "Hydrogen powers the sun.\nAtomic Number: 1  Atomic Mass: 1.008";
     }
 
-    public string getSymbol()
-    {
-        return "H";
-    }
-
     public int getCount()
     {
         return count;

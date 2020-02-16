@@ -23,7 +23,7 @@ public class Gold : MonoBehaviour, Element
         return "Fun Fact: If you bite gold, you might break your teeth!\nAtomic Number: 79  Atomic Mass: 196.97";
     }
 
-    public string getSymbol()
+    public string toString()
     {
         return "Au";
     }
@@ -31,10 +31,5 @@ public class Gold : MonoBehaviour, Element
     public int getCount()
     {
         return count;
-    }
-
-    public string toString()
-    {
-        return "Gold";
     }
 }

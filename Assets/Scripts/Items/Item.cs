@@ -49,6 +49,7 @@ public enum ItemType
 public interface Item
 {
     ItemType getType();
+    string toString();
     string getDescription();
     int getCount();   
 }

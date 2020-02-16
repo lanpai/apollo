@@ -4,32 +4,21 @@ using UnityEngine;
 
 public class Silicon : MonoBehaviour, Element
 {
-    Color color = new Color(0.32f, 0.41f, 0.47f);
+    public Color color = new Color(0.91f, 0.54f, 0.07f);
+
     private int count;
 
     private ItemType type;
     public ItemType getType()
     {
-        return ItemType.Silicon;
+        return ItemType.Copper;
     }
 
-    public Silicon(int c)
-    {
-        count = c;
-    }
+    public Silicon(int c) => count = c;
 
-    public string getDescription()
-    {
-        return "Computer chips are made with silicon, hence the name Silicon Valley.\nAtomic Number: 14  Atomic Mass: 28.085";
-    }
+    public string getDescription() => "Silicon is used in transistors, one of the most important advancements to humankind's ability to process the world around them.";
 
-    public string getSymbol()
-    {
-        return "Si";
-    }
+    public string toString() => "Si";
 
-    public int getCount()
-    {
-        return count;
-    }
+    public int getCount() => count;
 }

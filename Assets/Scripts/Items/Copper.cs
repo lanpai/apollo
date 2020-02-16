@@ -14,11 +14,12 @@ public class Copper : MonoBehaviour, Element
         return ItemType.Copper;
     }
 
+
     public Copper(int c) => count = c;
 
     public string getDescription() => "Copper is the third most consumed industrial metal in the world, with 75% of it being used for wires, cables, and electronics.\nAtomic Number: 29  Atomic Mass: 63.546";
 
-    public string getSymbol() => "Cu";
+    public string toString() => "Cu";
 
     public int getCount() => count;
 }

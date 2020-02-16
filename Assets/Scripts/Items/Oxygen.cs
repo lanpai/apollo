@@ -24,7 +24,7 @@ public class Oxygen : MonoBehaviour, Element
         return "Oxygen, it's what we breathe.\nAtomic Number: 8  Atomic Mass: 15.999";
     }
 
-    public string getSymbol()
+    public string toString()
     {
         return "O";
     }
@@ -32,10 +32,5 @@ public class Oxygen : MonoBehaviour, Element
     public int getCount()
     {
         return count;
-    }
-
-    public string toString()
-    {
-        return "Oxygen";
     }
 }

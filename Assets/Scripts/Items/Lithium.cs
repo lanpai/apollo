@@ -23,7 +23,7 @@ public class Lithium : MonoBehaviour, Element
         return "Lithium makes up our batteries. WOW!\nAtomic Number: 3  Atomic Mass: 6.94";
     }
 
-    public string getSymbol()
+    public string toString()
     {
         return "Li";
     }
