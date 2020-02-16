@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lithium : Element
+public class Lithium : MonoBehaviour, Element
 {
     private int count;
 

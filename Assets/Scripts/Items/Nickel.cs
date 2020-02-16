@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Nickel : Element
+public class Nickel : MonoBehaviour, Element
 {
     private int count;
 
