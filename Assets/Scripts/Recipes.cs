@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Recipes : MonoBehaviour
@@ -7,14 +6,22 @@ public class Recipes : MonoBehaviour
 
     public static Dictionary<List<ItemType>, List<ItemType>> recipes = new Dictionary<List<ItemType>, List<ItemType>>();
 
-    static Recipes() 
+    static Recipes()
     {
+        recipes.Add( //kerosene
+            new List<ItemType> { ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen },
+            new List<ItemType> { ItemType.Kerosene });
+
+        recipes.Add( //antenna
+            new List<ItemType> { ItemType.Iron, ItemType.Iron, ItemType.Iron },
+            new List<ItemType> { ItemType.Kerosene });
+
         recipes.Add( //radio
             new List<ItemType> { ItemType.Copper, ItemType.Lithium, ItemType.Gold, ItemType.Aluminum }, //output
-            new List<ItemType> { ItemType.Radio}); //input
+            new List<ItemType> { ItemType.Radio }); //input
 
         recipes.Add( //pillow
-            new List<ItemType> { ItemType.Carbon,  ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Oxygen},
+            new List<ItemType> { ItemType.Carbon, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Oxygen },
             new List<ItemType> { ItemType.Pillow });
 
         recipes.Add( //flag
@@ -34,7 +41,7 @@ public class Recipes : MonoBehaviour
             new List<ItemType> { ItemType.InnerWall });
 
         recipes.Add( //mattress
-            new List<ItemType> { ItemType.Carbon, ItemType.Hydrogen },
+            new List<ItemType> { ItemType.Carbon, ItemType.Carbon, ItemType.Hydrogen, ItemType.Hydrogen },
             new List<ItemType> { ItemType.Mattress });
 
         recipes.Add( //oven
@@ -70,23 +77,29 @@ public class Recipes : MonoBehaviour
             new List<ItemType> { ItemType.Server });
     }
 
-    public static List<List<ItemType>> CheckRecipes(List<ItemType> items) {
+    public static List<List<ItemType>> CheckRecipes(List<ItemType> items)
+    {
         List<List<ItemType>> results = new List<List<ItemType>>();
 
         Debug.Log("check");
 
-        foreach (KeyValuePair<List<ItemType>, List<ItemType>> i in recipes) {
+        foreach (KeyValuePair<List<ItemType>, List<ItemType>> i in recipes)
+        {
             bool recipeValid = true;
-            foreach (ItemType requirement in i.Value) {
+            foreach (ItemType requirement in i.Value)
+            {
                 bool reqFound = false;
-                foreach (ItemType item in items) {
-                    if (item == requirement) {
+                foreach (ItemType item in items)
+                {
+                    if (item == requirement)
+                    {
                         reqFound = true;
                         break;
                     }
                 }
-                
-                if (!reqFound) {
+
+                if (!reqFound)
+                {
                     recipeValid = false;
                     break;
                 }
