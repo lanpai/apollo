@@ -24,7 +24,7 @@ public enum ItemType
     Seats,
     SelfDetonatingButton,
     Server,
-    Toilet,
+    GlassCup, 
     Utensil,
     WaterBottle,
     Window,

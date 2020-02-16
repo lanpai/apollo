@@ -8,13 +8,14 @@ public class Recipes : MonoBehaviour
 
     static Recipes()
     {
+
         recipes.Add( //kerosene
             new List<ItemType> { ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen, ItemType.Hydrogen },
             new List<ItemType> { ItemType.Kerosene });
 
         recipes.Add( //antenna
             new List<ItemType> { ItemType.Iron, ItemType.Iron, ItemType.Iron },
-            new List<ItemType> { ItemType.Kerosene });
+            new List<ItemType> { ItemType.Antenna });
 
         recipes.Add( //radio
             new List<ItemType> { ItemType.Copper, ItemType.Lithium, ItemType.Gold, ItemType.Aluminum }, //output
@@ -52,9 +53,9 @@ public class Recipes : MonoBehaviour
             new List<ItemType> { ItemType.Carbon, ItemType.Carbon, ItemType.Hydrogen, ItemType.Carbon, ItemType.Carbon },
             new List<ItemType> { ItemType.Clothing });
 
-        recipes.Add( //toilet
+        recipes.Add( //glass cup
             new List<ItemType> { ItemType.Silicon, ItemType.Oxygen, ItemType.Oxygen, ItemType.Aluminum },
-            new List<ItemType> { ItemType.Toilet });
+            new List<ItemType> { ItemType.GlassCup });
 
         recipes.Add( //book
             new List<ItemType> { ItemType.Carbon, ItemType.Oxygen, ItemType.Hydrogen },
@@ -75,6 +76,11 @@ public class Recipes : MonoBehaviour
         recipes.Add( //server
             new List<ItemType> { ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Carbon, ItemType.Aluminum, ItemType.Aluminum, ItemType.Germanium, ItemType.Silicon, ItemType.Silicon, ItemType.Silicon, ItemType.Silicon },
             new List<ItemType> { ItemType.Server });
+
+        recipes.Add( //liquid oxygen
+            new List<ItemType> { ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen, ItemType.Oxygen },
+            new List<ItemType> { ItemType.LiquidOx });
+
     }
 
     public static List<List<ItemType>> CheckRecipes(List<ItemType> items)

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Toilet : MonoBehaviour, Item
+public class GlassCup : MonoBehaviour, Item
 {
     private int count;
-    public Toilet(int c)
+    public GlassCup(int c)
     {
         count = c;
     }
@@ -13,7 +13,7 @@ public class Toilet : MonoBehaviour, Item
     private ItemType type;
     public ItemType getType()
     {
-        return ItemType.Toilet;
+        return ItemType.GlassCup;
     }
 
     public string getDescription()
