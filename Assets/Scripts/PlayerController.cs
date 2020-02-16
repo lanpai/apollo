@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem particle;
 
+    public Transform closestItemPos;
+
     private void Start() {
         carriedItem = null;
         particle.Stop();
@@ -61,6 +63,8 @@ public class PlayerController : MonoBehaviour
             (closest.GetComponent(typeof(Rigidbody)) as Rigidbody).useGravity = false;
             closest.transform.position = Vector3.Lerp(closest.transform.position, position, 10.0f * Time.deltaTime);
 
+            closestItemPos = closest.transform;
+
             Debug.DrawRay(0.5f * (leftHand.transform.position + rightHand.transform.position),
                     (player.transform.forward * -2.0f) + (player.transform.up * 1.0f),
                     Color.red, 1.0f, true);
@@ -77,5 +81,9 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetFloat("Speed", player.velocity.magnitude / 5.0f);
+    }
+    public Transform getClosestTransform()
+    {
+        return closestItemPos;
     }
 }
