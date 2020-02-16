@@ -40,32 +40,28 @@ public class PlayerController : MonoBehaviour
                 (player.transform.forward * -2.0f) +
                 (player.transform.up * 1.0f);
             
-            float minDistance = 0.0f;
-            GameObject closest = null;
+            if (carriedItem == null) {
+                float minDistance = 0.0f;
+                GameObject closest = null;
 
-            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Item")) {
-                float distance = (position - obj.transform.position).magnitude;
+                foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Item")) {
+                    float distance = (position - obj.transform.position).magnitude;
 
-                if (closest == null || distance < minDistance) {
-                    closest = obj;
-                    carriedItem = obj.GetComponent(typeof(Rigidbody)) as Rigidbody;
-                    minDistance = distance;
+                    if (closest == null || distance < minDistance) {
+                        closest = obj;
+                        carriedItem = obj.GetComponent(typeof(Rigidbody)) as Rigidbody;
+                        minDistance = distance;
+                    }
                 }
-            }
 
-            Debug.Log(closest);
+                (closest.GetComponent(typeof(Rigidbody)) as Rigidbody).useGravity = false;
+            }
 
             leftHand.AddForce(player.transform.forward * -20000.0f * Time.deltaTime);
             rightHand.AddForce(player.transform.forward * -20000.0f * Time.deltaTime);
 
-            (closest.GetComponent(typeof(Rigidbody)) as Rigidbody).useGravity = false;
-            closest.transform.position = Vector3.Lerp(closest.transform.position, position, 10.0f * Time.deltaTime);
+            carriedItem.transform.position = Vector3.Lerp(carriedItem.transform.position, position, 10.0f * Time.deltaTime);
 
-            Debug.DrawRay(0.5f * (leftHand.transform.position + rightHand.transform.position),
-                    (player.transform.forward * -2.0f) + (player.transform.up * 1.0f),
-                    Color.red, 1.0f, true);
-
-            //closest.GetComponent<Renderer>().material.shader = Shader.Find("Outlined/Highlight");
             if (!particle.isPlaying)
                 particle.Play();
         }

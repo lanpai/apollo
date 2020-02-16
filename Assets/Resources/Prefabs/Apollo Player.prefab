@@ -5596,6 +5596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7465350215671779743, guid: 064ff3f6a9acf75469d1cf37a4ec569e,
     type: 3}
+  forwardOffset: 0
+  armSwingStrength: 0
 --- !u!1001 &881265362548010502
 PrefabInstance:
   m_ObjectHideFlags: 0

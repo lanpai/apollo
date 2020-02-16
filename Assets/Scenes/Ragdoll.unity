@@ -121,18 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!54 &712931283 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1592478290, guid: affe8af856ace0d5e981b91312668374,
-    type: 3}
-  m_PrefabInstance: {fileID: 881265362403675522}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &968633224 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 2115319547, guid: affe8af856ace0d5e981b91312668374,
-    type: 3}
-  m_PrefabInstance: {fileID: 881265362403675522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1258109503
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,12 +306,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 38.085003, y: -24.1, z: 8.434}
---- !u!198 &1425148185 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1817218818, guid: affe8af856ace0d5e981b91312668374,
-    type: 3}
-  m_PrefabInstance: {fileID: 881265362403675522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1693916105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 124719779169464674, guid: affe8af856ace0d5e981b91312668374,
@@ -337,18 +319,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 426435463, guid: affe8af856ace0d5e981b91312668374, type: 3}
-      propertyPath: leftHand
-      value: 
-      objectReference: {fileID: 968633224}
-    - target: {fileID: 426435463, guid: affe8af856ace0d5e981b91312668374, type: 3}
-      propertyPath: rightHand
-      value: 
-      objectReference: {fileID: 712931283}
-    - target: {fileID: 426435463, guid: affe8af856ace0d5e981b91312668374, type: 3}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 1425148185}
     - target: {fileID: 5278314296606852380, guid: affe8af856ace0d5e981b91312668374,
         type: 3}
       propertyPath: m_LocalPosition.x
