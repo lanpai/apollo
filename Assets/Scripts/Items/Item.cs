@@ -6,4 +6,5 @@ public interface Item
 {
     string getDescription();
     int getCount();
+    //Element[] getElements();
 }

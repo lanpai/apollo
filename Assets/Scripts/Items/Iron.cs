@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oven : Item
+public class Iron : Element
 {
     private int count;
-    public Oven(int c)
+    public Iron(int c)
     {
         count = c;
     }
     public string getDescription()
     {
-        return "";
+        //TODO
+        return "This is Iron. Not finished!";
     }
 
     public int getCount()
@@ -19,9 +20,5 @@ public class Oven : Item
         return count;
     }
 
-    public Element[] getElements()
-    {
-        Element[] elm = { new Iron(2), new Carbon(1) };
-        return elm; 
-    }
+    public string getSymbol() => "Fe";
 }
