@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tin : MonoBehaviour, Element
 {
+    Color color = new Color(0.39f, 0.63f, 0.80f);
     private int count;
 
     public Tin(int c)

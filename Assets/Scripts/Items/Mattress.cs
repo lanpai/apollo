@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mattress : MonoBehaviour, Item
 {
+    Color color = new Color(1f, 1f, 1f);
     private int count;
     public Mattress(int c)
     {

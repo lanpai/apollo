@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Iron : MonoBehaviour, Element
 {
+    Color color = new Color(.53f, 0.25f, 0f);
     private int count;
     public Iron(int c)
     {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OuterWall : MonoBehaviour, Item
 {
+    Color color = new Color(0.01f, 0.15f, 0.15f);
+
     private int count;
     public OuterWall(int c)
     {

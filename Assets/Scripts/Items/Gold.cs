@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gold : MonoBehaviour, Element
 {
+    Color color = new Color(0.98f, 0.66f, 0.04f);
     private int count;
 
     public Gold(int c)

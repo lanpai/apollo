@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Lithium : MonoBehaviour, Element
 {
+    Color color = new Color(0.01f, 1, 0.95f);
     private int count;
 
     public Lithium(int c)

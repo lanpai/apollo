@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OxygenTank : MonoBehaviour, Item
 {
+    Color color = new Color(0.01f, 0.88f, 0.88f);
     private int count;
     public OxygenTank(int c)
     {

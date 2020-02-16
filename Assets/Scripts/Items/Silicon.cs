@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Silicon : MonoBehaviour, Element
 {
+    Color color = new Color(0.32f, 0.41f, 0.47f);
     private int count;
 
     public Silicon(int c)

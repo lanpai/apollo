@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Nickel : MonoBehaviour, Element
 {
+    Color color = new Color(1f, 0.95f, 0.33f);
     private int count;
 
     public Nickel(int c)

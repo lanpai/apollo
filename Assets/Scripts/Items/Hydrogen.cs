@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hydrogen : MonoBehaviour, Element
 {
+    Color color = new Color(0.47f, 0.45f, 1f);
     private int count;
 
     public Hydrogen(int c)

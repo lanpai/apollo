@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Germanium : MonoBehaviour, Element
 {
+    Color color = new Color(0.8f, 1f, 0.42f);
     private int count;
 
     public Germanium(int c)

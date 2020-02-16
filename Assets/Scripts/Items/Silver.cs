@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Silver : MonoBehaviour, Element
 {
+    Color color = new Color(0.8f, 0.92f, 1f);
     private int count;
 
     public Silver(int c)
