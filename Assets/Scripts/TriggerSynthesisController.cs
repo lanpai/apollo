@@ -5,7 +5,12 @@ using UnityEngine;
 public class TriggerSynthesisController : MonoBehaviour
 {
     public List<Collider> elements = new List<Collider>();
+    public Dictionary<ItemType, List<ItemType>> recipes;
+    public List<ItemType> items = new List<ItemType>();
 
+    private void Start() {
+        recipes = Recipes.getDictionary();
+    }
     private void Update() 
     {
         foreach (Collider i in elements)
@@ -17,11 +22,23 @@ public class TriggerSynthesisController : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other) {
-        elements.Add(other);
-        Destroy(other);
-        foreach (Collider i in elements)
+        items.Add((other.gameObject.GetComponent(typeof(Item)) as Item).getType());
+        Destroy(other.gameObject);
+
+        List<ItemType> validRecipes = Recipes.CheckRecipes(items);
+        if (validRecipes.Count == 1) {
+            Debug.Log(validRecipes[0]);
+
+            switch (validRecipes[0]) {
+                case ItemType.Radio:
+                    GameObject prefab = Resources.Load("Prefabs/Radio") as GameObject;
+                    Instantiate(prefab, Vector3.zero + Vector3.up * 5.0f, Quaternion.identity);
+                    break;
+            }
+        }
+        else if (validRecipes.Count == 0)
         {
-            print(i);            
+            Debug.Log("No Recipes Found!");
         }
     }
 }
