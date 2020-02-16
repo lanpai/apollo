@@ -8,40 +8,24 @@ public class PlayerController : MonoBehaviour
     public Rigidbody player;
 
     public float moveSpeed;
-    public float moveSpeedConstant;
     public float speedLimit;
 
     public float rotationSpeed;
 
     private void FixedUpdate() {
 
-        Vector3 finalMovement = Vector3.zero;
-        float currentRotation = player.transform.rotation.eulerAngles.y;
+        Vector3 finalMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
 
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKey("w"))
-            finalMovement.z += moveVertical;
-        if (Input.GetKey("a"))
-            finalMovement.x += moveHorizontal;      
-        if (Input.GetKey("s"))
-            finalMovement.z += moveVertical;
-        if (Input.GetKey("d"))
-            finalMovement.x += moveHorizontal;
         if (Input.GetKeyDown("q"))
             GetComponent<PlayerInteractions>().dropItem(player.transform);
 
-        player.AddForce(Vector3.ClampMagnitude(moveSpeedConstant * finalMovement.normalized + moveSpeed * finalMovement.normalized * Time.deltaTime, speedLimit));
+        player.AddForce(moveSpeed * finalMovement.normalized * Time.deltaTime);
+        if (finalMovement.magnitude > 0.01) {
+            Quaternion to = Quaternion.LookRotation(-player.velocity.normalized, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, to, Time.deltaTime * rotationSpeed);
+            //transform.rotation = to;
+        }
 
-        transform.rotation = Quaternion.LookRotation(-player.velocity);
-    }
-    private void cwRotation()
-    {
-        player.transform.Rotate(Vector3.ClampMagnitude(new Vector3(0, rotationSpeed, 0), 90) * Time.deltaTime, Space.Self);
-    }
-    private void ccwRotation()
-    {
-        player.transform.Rotate(Vector3.ClampMagnitude(new Vector3(0, -rotationSpeed, 0), 90) * Time.deltaTime, Space.Self);
+        player.velocity = Vector3.ClampMagnitude(player.velocity, speedLimit);
     }
 }
