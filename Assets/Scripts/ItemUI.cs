@@ -7,12 +7,16 @@ public class ItemUI : MonoBehaviour
     public TextMesh text;
     public GameObject player;
 
+    public Dictionary<List<ItemType>, List<ItemType>> recipes;
+
     private void Start() 
     {
         text = GetComponentInChildren<TextMesh>();
 
         text.text = GetComponent<Radio>().getDescription();
         text.GetComponent<Renderer>().enabled = false;
+
+        //recipes = Resources.Load("Scripts/Recipes");
     }
     private void Update() 
     {

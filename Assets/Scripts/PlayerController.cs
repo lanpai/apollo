@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem particle;
 
+    public Transform closestItemPos;
+
     private void Start() {
         carriedItem = null;
         particle.Stop();
@@ -61,6 +63,8 @@ public class PlayerController : MonoBehaviour
             rightHand.AddForce(player.transform.forward * -20000.0f * Time.deltaTime);
 
             carriedItem.transform.position = Vector3.Lerp(carriedItem.transform.position, position, 10.0f * Time.deltaTime);
+            
+            closestItemPos = carriedItem.transform;
 
             if (!particle.isPlaying)
                 particle.Play();
@@ -73,5 +77,9 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetFloat("Speed", player.velocity.magnitude / 5.0f);
+    }
+    public Transform getClosestTransform()
+    {
+        return closestItemPos;
     }
 }
